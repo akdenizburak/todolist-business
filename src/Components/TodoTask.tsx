@@ -4,21 +4,31 @@ import '../Styles/App.css'
 
 interface Props {
     task: ITask;
-    completeTask(taskNameToDelete: string): void;
+    deleteTask(taskNameToDelete: string): void;
 }
 
-const TodoTask = ({ task, completeTask }: Props) => {
+const completeTask = (event:any) => {
+    if (event.target.style.textDecoration) {
+      event.target.style.removeProperty('text-decoration');
+    } else {
+      event.target.style.setProperty('text-decoration', 'line-through');
+    }
+  };
+
+const TodoTask = ({ task, deleteTask }: Props) => {
     return (
         <div className='containerTaskItem'>
-            <div className='containerLeft'>
+            <div className='containerLeft' onClick={
+                    completeTask                
+                }>
                 <br />Görev: {task.taskName}<br /> Deadline: {task.deadline}
             </div>
             <div className='containerRight'>
-                <hr />
+                <hr />         
                 <button className='buttonDelete' onClick={() => {
-                    completeTask(task.taskName);
+                    deleteTask(task.taskName);
                 }
-                }> - </button>
+                }> X </button>
             </div>
         </div>
     )

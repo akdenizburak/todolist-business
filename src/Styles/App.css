@@ -1,3 +1,4 @@
+
 .App {
   display: flex;
   align-items: center;
@@ -10,14 +11,17 @@
 
 .Login{
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 15pt;
+  font-weight: 900;
+  font-size: 20pt;
   flex:30%;
   background-color: yellowgreen;
-  width: 100%;
-  display: flex;
+  width: 60%;
+  height: 50vh;
   justify-content: center;
-  align-items: center;
   border-radius: 10px;
+  box-shadow: 3px 4px 9px black;
+  margin: 10% auto;
+
 }
 
 .Login .inputContainer{
@@ -29,23 +33,23 @@
   width: 200px;
   height: 40px;
   border: none;
-  border-bottom-left-radius: 8px;
-  border-top-left-radius: 8px;
+  border-radius: 8px;
   padding-left: 10px;
   font-size:17px;
   border:1px solid grey;
+  box-shadow: 3px 4px 9px black;
   font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
 
 .Login button{
+  box-shadow: 3px 4px 9px black;
   font-weight: 800;
   margin:10px;
   width: 70px;
   height: 50px;
   border:none;
-  border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 8px;
   padding-left:10px;
   cursor: pointer;
   background-color: rgb(0, 128, 255);
@@ -61,15 +65,28 @@
   margin:10px;
 }
 
-.Dashboard{
-
+.Login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.Dashboard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10%;
+  background-color: #ffe1e1;
+  padding: 10px;
+  border-radius: 20px;
+}
+
 
 .containerTaskInput{
   display: flex;
   align-items: center;
   flex-direction: row;
-  width: 50%;
+  width: 70%;
   height: 10vh;
   font-family: Arial, Helvetica, sans-serif;
   background-color: coral;
@@ -81,7 +98,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  width: 50%;
+  width: 70%;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(68, 215, 255);
@@ -91,7 +108,20 @@
 }
 
 .inputTask{
+  margin-left: 10px;
   width: 90%;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  padding-left: 10px;
+  font-size:17px;
+  border:1px solid grey;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.inputDeadline{
+  margin: 0px 10px;
+  width: 20%;
   height: 40px;
   border: none;
   border-radius: 8px;
@@ -127,8 +157,29 @@
 }
 
 .taskLabel{
+  margin:20px;
   width: 90%;
   font-size: larger;
   font-weight: 900;
+}
+
+.containerTaskItem{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff80;
   margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.containerLeft{
+  display: flex;
+  justify-content: left;
+}
+
+.containerRight{
+  display: flex;
+  justify-content: right;
 }

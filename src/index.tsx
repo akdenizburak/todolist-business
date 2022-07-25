@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import MyButton from './Components/MyButton';
+import App from './Pages/App';
+import Dashboard from './Pages/Dashboard';
+import Login from './Pages/Login';
 import reportWebVitals from './reportWebVitals';
-import Dashboard from './Dashboard';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <App/>
   </React.StrictMode>
 );
 
